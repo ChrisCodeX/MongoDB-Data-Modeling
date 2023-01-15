@@ -5,11 +5,10 @@
   </p>
 </div>
 
-
 :open_book: Documentation:
 
 - :green_circle: https://www.mongodb.com/docs/atlas/
 - :green_circle: https://www.mongodb.com/docs/
-- :green_circle: https://www.mongodb.com/docs/mongodb-vscode/playgrounds/
+- :green_circle: https://www.mongodb.com/docs/manual/reference/bson-types/
 - :green_circle: https://hub.docker.com/_/mongo
 
