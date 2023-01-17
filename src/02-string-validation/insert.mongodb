@@ -1,0 +1,13 @@
+use('store')
+
+// Validation alert
+// db.users.insertOne({
+//   last_name: 'Espinoza',
+//   email: 123
+// })
+
+db.users.insertOne({
+  last_name: 'Espinoza',
+  email: 'c.espinoza.code@gmail.com',
+  password: '1234'
+})
