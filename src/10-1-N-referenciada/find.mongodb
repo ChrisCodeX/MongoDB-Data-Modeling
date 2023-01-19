@@ -1,0 +1,55 @@
+use('store')
+
+// Get user information
+db.orders.find({
+  user_id: ObjectId('63c844735836a72c12ca9175')
+})
+db.users.find({
+  _id: ObjectId('63c844735836a72c12ca9175')
+})
+
+// Get all orders with his user
+db.orders.aggregate([
+  {
+    $lookup: {
+      from: 'users',
+      localField: 'user_id',
+      foreignField: '_id',
+      as: 'user'
+    }
+  }
+])
+
+// Get 1 specific order by id
+db.orders.aggregate([
+  {
+    $match: {
+      _id: ObjectId('63c8539d75028fe2a6d679be')
+    }
+  },
+  {
+    $lookup: {
+      from: 'users',
+      localField: 'user_id',
+      foreignField: '_id',
+      as: 'user'
+    }
+  }
+])
+
+// Get 1 specific order by userId
+db.users.aggregate([
+  {
+    $match: {
+    _id: ObjectId('63c844735836a72c12ca9175')
+    }
+  },
+  {
+    $lookup: {
+      from: 'orders',
+      localField: '_id',
+      foreignField: 'user_id',
+      as: 'orders'
+    }
+  }
+])
