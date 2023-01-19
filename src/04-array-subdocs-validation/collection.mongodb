@@ -1,0 +1,40 @@
+use('store')
+
+db.createCollection('products', {
+  validator: {
+    $jsonSchema: {
+      bsonType: 'object',
+      title: 'Users Object validation',
+      required: ['name'],
+      properties: {
+        name: {
+          bsonType: 'string',
+          description: "'name' must be a string"
+        },
+        sizes: {
+          bsonType: 'array',
+          // Minima cantidad de elementos del array
+          minItems: 1,
+          // Solamente permitir elementos únicos en el array
+          uniqueItems: true,
+          // Validación para los elementos del array
+          items: {
+            bsonType: 'string'
+          }
+        },
+        category: {
+          bsonType: 'object',
+          required: ['name'],
+          properties: {
+            name: {
+              bsonType: 'string'
+            },
+            image: {
+              bsonType: 'string'
+            }
+          }
+        }
+      }
+    }
+  }
+})
