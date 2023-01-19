@@ -1,0 +1,21 @@
+use('store')
+
+db.stores.findOne({
+  storeId: 'ST001'
+})
+
+db.stores_details.findOne({
+  storeId: 'ST001'
+})
+
+// Enlazando desde stores a stores_details
+db.stores.aggregate([
+  {
+    $lookup: {
+      from: 'stores_details',
+      localField: 'storeId',
+      foreignField: 'storeId',
+      as: 'detail'
+    }
+  }
+])
