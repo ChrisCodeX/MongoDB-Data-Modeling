@@ -1,0 +1,18 @@
+use('store')
+
+db.users.insertOne({
+  email: 'chris@gmail.com',
+  password: '1234567Asdf',
+  role: 'admin',
+  social_accounts: ['twitter', 'facebook'],
+  address: {
+    street: 'cr 123',
+    city: 'Bogota',
+    zip: '11011'
+  },
+  shipping_address: {
+    street: 'Jr. San Francisco 322',
+    city: 'Mexico DF',
+    zip: '32111'
+  }
+})

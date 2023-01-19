@@ -1,0 +1,7 @@
+use('store')
+
+db.users.find({
+  "address.city": {
+    $eq: 'Bogota'
+  }
+})
