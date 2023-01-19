@@ -1,0 +1,41 @@
+use('store')
+
+// First Product
+// db.orders.updateOne(
+//   {
+//     _id: ObjectId('63c89edaf976ba05606e9976')
+//   },
+//   {
+//     $push: {
+//       items: {
+//         name: 'Product 1',
+//         price: 12,
+//         qty: 2,
+//         product_id: ObjectId('63c87e1e9a861c7227851886')
+//       }
+//     },
+//     $inc: {
+//       total: 12 * 2
+//     }
+//   }
+// )
+
+// Second Product
+db.orders.updateOne(
+  {
+    _id: ObjectId('63c89edaf976ba05606e9976')
+  },
+  {
+    $push: {
+      items: {
+        name: 'Product 2',
+        price: 50,
+        qty: 1,
+        product_id: ObjectId('63c87e1e9a861c7227851887')
+      }
+    },
+    $inc: {
+      total: 50 * 1
+    }
+  }
+)

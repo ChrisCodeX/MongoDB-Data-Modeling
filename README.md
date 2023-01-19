@@ -7,8 +7,8 @@
 
 :open_book: Documentation:
 
+- :green_circle: https://www.mongodb.com/blog/post/building-with-patterns-a-summary
 - :green_circle: https://www.mongodb.com/docs/atlas/
 - :green_circle: https://www.mongodb.com/docs/
 - :green_circle: https://www.mongodb.com/docs/manual/reference/bson-types/
-- :green_circle: https://hub.docker.com/_/mongo
 

@@ -1,0 +1,6 @@
+use('store')
+
+db.orders.find({
+    _id: ObjectId('63c89edaf976ba05606e9976')
+})
+

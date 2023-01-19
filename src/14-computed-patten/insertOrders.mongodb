@@ -1,0 +1,9 @@
+use('store')
+
+// 63c89edaf976ba05606e9976
+db.orders.insertOne({
+  user_id: ObjectId('63c8678bc238fb2a07dd7f3e'),
+  date: "2020-12-12",
+  total: 0,
+  items: []
+})

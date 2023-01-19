@@ -1,0 +1,20 @@
+use('store')
+
+db.products.updateOne({
+  _id: ObjectId('63c87e1e9a861c7227851886')
+}, {
+  $set: {
+    stores_ids: [
+      ObjectId('63c87f39dcb578155a06afe5')
+    ]
+  }
+})
+
+// db.products.updateOne({
+//   _id: ObjectId('63c87e1e9a861c7227851886')
+// }, {
+//   $push: {
+//     stores_ids: ObjectId('63c87f39dcb578155a06afe6')
+//   }
+// })
+
