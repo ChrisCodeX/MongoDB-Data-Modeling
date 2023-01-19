@@ -1,0 +1,32 @@
+use('store')
+
+// Order 1
+// db.orders.insertOne({
+//   user_id: ObjectId('63c844735836a72c12ca9175'),
+//   date: '2020-12-12',
+//   items: [
+//     {
+//       name: 'Camiseta',
+//       price: 120,
+//       qty: 1
+//     },
+//     {
+//       name: 'Pantalón',
+//       price: 200,
+//       qty: 2
+//     }
+//   ]
+// })
+
+// Order 2
+db.orders.insertOne({
+  user_id: ObjectId('63c844735836a72c12ca9175'),
+  date: '2020-12-10',
+  items: [
+    {
+      name: 'Jueguete',
+      price: 120,
+      qty: 3
+    }
+  ]
+})
